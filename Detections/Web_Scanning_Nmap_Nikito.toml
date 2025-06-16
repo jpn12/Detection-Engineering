@@ -1,5 +1,7 @@
-[rule]
+[metadata]
 creation_date = "2025/06/16"
+
+[rule]
 author = ["JP"]
 description = "This alert detect vulnerability test executed by tools[Nikto, Nmap, Nessus]"
 from = "now-9m" 
