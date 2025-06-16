@@ -14,4 +14,4 @@ jobs:
         with:
           python-version: '3.11.4'
       - run: pip install requests
-      - run: python Scripts/toml_to_json.py
+      - run: python Scripts/Toml_to_json.py
