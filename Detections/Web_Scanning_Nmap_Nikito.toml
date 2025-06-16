@@ -9,6 +9,7 @@ index = ["logs-endpoint.events.process-*"]
 name = "Web Scanner Activity - Nmap, Nessus and nikto"
 severity = "medium"
 rule_id = "123adads-daf5-4e1a-9049-ff79b5254704"
+risk_score = 25
 tags = ["example"]
 type = "query"
 
