@@ -10,6 +10,7 @@ name = "Web Scanner Activity - Nmap, Nessus and nikto"
 risk_score = 25
 severity = "high"
 risk_score = 25
+severity = "high"
 rule_id = "123adads-daf5-4e1a-9049-ff79b5254704"
 tags = ["example"]
 type = "query"
