@@ -7,6 +7,7 @@ description = "This alert detect vulnerability test executed by tools[Nikto, Nma
 from = "now-9m" 
 index = ["logs-endpoint.events.process-*"]
 name = "Web Scanner Activity - Nmap, Nessus and nikto"
+risk_score = 25
 severity = "High"
 rule_id = "123adads-daf5-4e1a-9049-ff79b5254704"
 tags = ["example"]
