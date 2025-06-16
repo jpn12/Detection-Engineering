@@ -14,7 +14,7 @@ headers = {
 changed_files = ""
 
 data = ""
-for root, dirs, files in os.walk("C:/Users/User/Documents/TOML/Converted_detections/"):
+for root, dirs, files in os.walk("Detections/"):
     for file in files:
         if file in changed_files:
             data = "{\n"
