@@ -20,7 +20,7 @@ tags = [
     "Data Source: PAN-OS",
     "Resources: Investigation Guide"
 ]
-timestamp_override = "event.ingested"
+timestamp_override = "event.created"
 type = "threshold"
 query = '''
 event.dataset:zeek* and destination.port : * and
