@@ -6,7 +6,7 @@ author = ["JP"]
 description = """
 This rule identifies a potential network sweep.
 """
-from = "now-9m"
+from = "now-1h"
 index = [".alerts-security.alerts-default", "apm-*-transaction*", "auditbeat-*", "endgame-*", "filebeat-*", "logs-*", "packetbeat-*", "traces-apm*", "winlogbeat-*", "-*elastic-cloud-logs-*"]
 name = "[Zeek] Potential Network Sweep Detected"
 risk_score = 21
