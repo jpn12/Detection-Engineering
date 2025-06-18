@@ -4,7 +4,7 @@ creation_date = "2025/06/16"
 [rule]
 author = ["JP"]
 description = "This alert detect vulnerability test executed by tools[Nikto, Nmap, Nessus]"
-from = "now-9m" 
+from = "now-1h" 
 index = [".alerts-security.alerts-default", "apm-*-transaction*", "auditbeat-*", "endgame-*", "filebeat-*", "logs-*", "packetbeat-*", "traces-apm*", "winlogbeat-*", "-*elastic-cloud-logs-*"]
 name = "[Zeek] Web Scanner Activity - Nmap, Nessus and nikto"
 severity = "low"
@@ -14,7 +14,8 @@ tags = ["example"]
 type = "query"
 
 query = '''
-event.dataset: zeek* and user_agent.original:*Nmap* or user_agent.original:*Nikto* or user_agent.original:*Nessus*
+event.dataset: zeek* and (user_agent.original:*Nmap* or user_agent.original:*Nikto* or user_agent.original:*Nessus*)
+
 '''
 
 [[rule.threat]]
