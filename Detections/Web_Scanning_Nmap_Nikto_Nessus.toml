@@ -14,7 +14,7 @@ tags = ["example"]
 type = "query"
 
 query = '''
-event.dataset: zeek and user_agent.original:*Nmap* or user_agent.original:*Nikto* or user_agent.original:*Nessus*
+event.dataset: zeek* and user_agent.original:*Nmap* or user_agent.original:*Nikto* or user_agent.original:*Nessus*
 '''
 
 [[rule.threat]]
