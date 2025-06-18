@@ -23,7 +23,8 @@ tags = [
 timestamp_override = "event.ingested"
 type = "threshold"
 query = '''
-event.dataset:zeek* and source.ip:(10.0.0.0/8 or 172.16.0.0/12 or 192.168.0.0/16)
+event.dataset:zeek* and destination.port : * and
+source.ip:(10.0.0.0/8 or 172.16.0.0/12 or 192.168.0.0/16)
 '''
 
 [[rule.threat]]
