@@ -6,7 +6,7 @@ author = ["JP"]
 description = """
 This rule identifies a potential network sweep.
 """
-from = "now-1h"
+from = "now-1h" 
 index = [".alerts-security.alerts-default", "apm-*-transaction*", "auditbeat-*", "endgame-*", "filebeat-*", "logs-*", "packetbeat-*", "traces-apm*", "winlogbeat-*", "-*elastic-cloud-logs-*"]
 name = "[Zeek] Potential Network Sweep Detected"
 risk_score = 21
@@ -20,10 +20,10 @@ tags = [
     "Data Source: PAN-OS",
     "Resources: Investigation Guide"
 ]
-timestamp_override = "event.created"
+timestamp_override = "event.ingested"
 type = "threshold"
 query = '''
-event.dataset:zeek* and destination.port : * and
+event.dataset:zeek.connection and destination.port : * and
 source.ip:(10.0.0.0/8 or 172.16.0.0/12 or 192.168.0.0/16)
 '''
 
